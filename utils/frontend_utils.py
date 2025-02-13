@@ -3,6 +3,7 @@ import os
 from streamlit_pdf_viewer import pdf_viewer 
 import utils.backend_utils as backend
 
+
 dir_path = os.getcwd()
 
 @st.cache_data
@@ -26,3 +27,16 @@ def resume_view_and_download(resume_pdf_path = backend.resume_pdf_path, resume_d
 
 
     st.download_button("Download Resume", data=backend.pdf_reader(resume_pdf_path), file_name=resume_download_name)
+
+
+def certification_view(cert_name, cert_name_display, credential_link=None, dir_path=dir_path, validate=None):
+    cert_path = fr'{dir_path}\certifications\{cert_name}'
+
+
+    with st.container():
+        with st.expander(f'View {cert_name_display} PDF'):
+            pdf_viewer(cert_path, width="100%", height=1000)
+            if credential_link:
+                st.markdown(f'Link to [{cert_name_display}]({credential_link}) credential/badge')
+        
+            st.download_button(f"Download {cert_name_display}", data=backend.pdf_reader(cert_path), file_name=cert_name, mime='application/pdf')
