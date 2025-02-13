@@ -7,10 +7,10 @@ dir_path = os.getcwd()
 
 @st.cache_data
 def create_sidebar(dir_path=dir_path):
+
     st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Osher's Resume App</h1>", unsafe_allow_html=True)
     st.sidebar.image(fr'{dir_path}\resume\self.jpeg')
     st.sidebar.markdown("## __About Osher__")
-    st.markdown("<h1 style='text-align: center; color: white;'>Osher's Resume</h1>", unsafe_allow_html=True)
 
 
     about = "I am a data scientist with a passion for transforming dataframes into actionable insights. \
@@ -25,4 +25,4 @@ def resume_view_and_download(resume_pdf_path = backend.resume_pdf_path, resume_d
 
 
 
-    st.download_button("Download Resume", data=backend.pdf_reader(resume_pdf_path), file_name='osher_boudara_resume.pdf')
+    st.download_button("Download Resume", data=backend.pdf_reader(resume_pdf_path), file_name=resume_download_name)
