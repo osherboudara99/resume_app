@@ -1,5 +1,11 @@
 gdown==5.2.0
 streamlit==1.42.0
 streamlit_pdf_viewer==0.0.21
+gpt4all 
+langchain 
+pypdf 
+sentence-transformers 
+faiss-cpu
+langchain-community
 
 # pipreqs
