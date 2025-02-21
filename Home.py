@@ -1,6 +1,8 @@
 import streamlit as st
 import utils.backend_utils as backend, utils.frontend_utils as frontend
 
+st.set_page_config(layout='wide')
+
 frontend.create_sidebar()
 
 st.markdown("<h1 style='text-align: center; color: white;'>Osher's Resume</h1>", unsafe_allow_html=True)

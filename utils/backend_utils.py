@@ -58,6 +58,7 @@ def read_and_correct_resume_markdown(dir_path = dir_path):
     """
     resume_markdown = resume_markdown.replace('# **OSHER BOUDARA**', '')
     resume_markdown = resume_markdown.replace('[osherboudara99@gmail.com](mailto:osherboudara99@gmail.com) | 818.809.4261', '')
+    resume_markdown = resume_markdown.replace("â€™", "'")
     resume_markdown = email_number_aligned + resume_markdown
 
     resume_markdown = resume_markdown.replace(r'\[\[BR\]\]', '\n Dates:')

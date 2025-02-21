@@ -10,7 +10,7 @@
 * Leading and developing projects in multiple data science and engineering teams in the crop science division of a global Fortune 500 client company, adapting to evolving requirements and delivering solutions to stakeholders.  
 * Implementing data science life cycle components: automated ETL pipelines, MLOps, cloud-computing code development, cloud technologies, version control, internal/external information system management, and visualization tools.  
 * Sole developer of the Climate Impact and Adaptation tool; a time-optimized and efficient crop modeling framework, utilizing ETL pipelines, complex data science techniques, and MLOps, that simulates crop growth globally under different climate change scenarios. Derives visualized insight on the crop growing cycle, environmental conditions, agricultural management practices, crop yield shifts, gas emissions and how climate change impacts these factors through 2100\.   
-* Driving utilization of the Climate Impact and Adaptation tool throughout client company, advising teams on how to adjust  business strategy due to stresses of climate change whilst maintaining company revenue.  
+* Driving utilization of the Climate Impact and Adaptation tool, advising business-facing teams on how to adjust strategy due to stresses of climate change whilst maintaining company revenue.   
 * Successfully delivered the patentable Market Share Forecast tool employing ML Ops and data science techniques for predictions, classification, and feature extraction, providing unprecedented, actionable business insights to the client.
 
 #### **Hoffman Brothers Realty** *\-  Python Developer* \[\[BR\]\]				       	Jan. 2022 \- Dec. 2022
@@ -25,6 +25,14 @@
 #### **Affinity Healthcare Center** *\- Data Entry* \[\[BR\]\]	            	          			              May 2019 \- Jan. 2022
 
 * Facilitated data entry into the company database, constructing various scripts to automate insertion processes.
+
+#### **Red Oak Enterprises** *\- Leasing Consultant* \[\[BR\]\]	            	          			              Sep. 2019 \- Jun. 2020
+
+* Presented and leased over 50 units, increasing company traction and profit.
+
+#### **Danny’s Tutoring** *\- Tutor* \[\[BR\]\]	            	          			              	                             Sep. 2018 \- Jun. 2019
+
+* Mentored several students in mathematics (through Calculus) and US history to successfully pass their courses.
 
 ## **SKILLS**
 
@@ -46,5 +54,5 @@
 
 - Gap Year Program, June 2018 
 
-             **LINKEDIN  		       	       GITHUB**    			  **CERTIFICATIONS**	                [www.linkedin.com/in/osher-boudara-a612921b5/](https://www.linkedin.com/in/osher-boudara-a612921b5/)                [www.github.com/osherboudara99/](http://www.github.com/osherboudara99/)             [www.linkedin.com/in/osher-boudara](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)[\-a612921b5](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)[/details/certifications/](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)           
+             **LINKEDIN  		       	      GITHUB**    			      **CERTIFICATIONS**	                [www.linkedin.com/in/osher-boudara-a612921b5/](https://www.linkedin.com/in/osher-boudara-a612921b5/)                [www.github.com/osherboudara99/](http://www.github.com/osherboudara99/)             [www.linkedin.com/in/osher-boudara](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)[\-a612921b5](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)[/details/certifications/](http://www.linkedin.com/in/osher-boudara-a612921b5/details/certifications/)           
           	          [www.github.com/osherboudara-work/](http://www.github.com/osherboudara-work/)              
