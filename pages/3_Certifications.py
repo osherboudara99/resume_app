@@ -2,7 +2,9 @@ import streamlit as st
 import utils.backend_utils as backend
 import utils.frontend_utils as frontend
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_icon=':notebook:')
+
+frontend.load_css()
 
 frontend.create_sidebar()
 

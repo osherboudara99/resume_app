@@ -1,0 +1,46 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animated-widget {
+    animation: fadeIn 3s ease-out;
+}
+.stButton>button {
+    animation: fadeIn 3s ease-out;
+}
+.stTextInput>div>div>input {
+    animation: fadeIn 3s ease-out;
+}
+.stMarkdown {
+    animation: fadeIn 3s ease-out;
+}
+.stImage {
+    animation: fadeIn 3s ease-out;
+}
+.stExpander {
+    animation: fadeIn 3s ease-out;
+}
+
+/*Background color */
+body {
+    background-color: #171718;
+}
+
+
+/* Sidebar background color */
+/* [data-testid="stSidebar"] {
+    background-color: #171718;
+} */
+
+/* Sidebar text
+[data-testid="stSidebar"] * {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+} */
+
+/* Customize sidebar selectbox */
+[data-testid="stSidebar"] select {
+    background-color: #FF5733;
+    color: white;
+    font-weight: bold;
+}
