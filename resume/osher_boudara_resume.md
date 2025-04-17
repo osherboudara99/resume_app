@@ -5,7 +5,7 @@
 
 ## **EXPERIENCE**
 
-#### **Cognizant**  *\-  Data Scientist* \[\[BR\]\]					       		                 Aug. 2022 \- Present
+#### **Cognizant**  *\-  Associate Data Scientist* \[\[BR\]\]					       	Aug. 2022 \- Present
 
 * Leading and developing projects in multiple data science and engineering teams in the crop science division of a global Fortune 500 client company, adapting to evolving requirements and delivering solutions to stakeholders.  
 * Implementing data science life cycle components: automated ETL pipelines, MLOps, cloud-computing code development, cloud technologies, version control, internal/external information system management, and visualization tools.  
