@@ -1,12 +1,13 @@
 import streamlit as st
 import utils.backend_utils as backend
 import utils.frontend_utils as frontend
+import utils.chatbot_utils as chatbot
 
 st.set_page_config(layout="wide", page_icon=':notebook:')
 
 frontend.load_css()
 
-frontend.create_sidebar()
+chatbot.create_sidebar()
 
 st.markdown("<h1 style='text-align: center; color: white;'>Certifications</h1>", unsafe_allow_html=True)
 

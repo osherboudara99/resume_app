@@ -1,10 +1,10 @@
 import streamlit as st
-import utils.backend_utils as backend, utils.frontend_utils as frontend
+import utils.backend_utils as backend, utils.frontend_utils as frontend, utils.chatbot_utils as chatbot
 
 st.set_page_config(layout='wide', page_title='Home', page_icon=":house:")
 
 frontend.load_css()
-frontend.create_sidebar()
+chatbot.create_sidebar()
 
 st.markdown("<h1 class='animated-widget' style='text-align: center; color: white;'>Osher's Resume</h1>", unsafe_allow_html=True)
 
