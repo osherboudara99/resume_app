@@ -163,3 +163,4 @@ cython_debug/
 
 # Chatbot Directory
 models/
+db/
