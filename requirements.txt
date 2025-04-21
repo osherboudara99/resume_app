@@ -1,11 +1,6 @@
+chromadb==1.0.5
 gdown==5.2.0
+sentence_transformers==3.4.1
 streamlit==1.42.0
 streamlit_pdf_viewer==0.0.21
-gpt4all 
-langchain 
-pypdf 
-sentence-transformers 
-faiss-cpu
-langchain-community
-
-# pipreqs
+llama-cpp-python

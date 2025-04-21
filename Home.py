@@ -1,16 +1,18 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import utils.backend_utils as backend, utils.frontend_utils as frontend
-import time
-import os
-
-dir_path = os.getcwd()
 
 st.set_page_config(layout='wide', page_title='Home', page_icon=":house:")
 
+import utils.backend_utils as backend, utils.frontend_utils as frontend, utils.chatbot_utils as chatbot
+import time
+import os
+
+
+dir_path = os.getcwd()
+
 frontend.load_css()
 
-frontend.create_sidebar()
+chatbot.create_sidebar()
 
 st.markdown("<h1 class='animated-widget' justify-content: center; style='text-align: center; color: white;'>Osher Boudara</h1>", unsafe_allow_html=True)
 
