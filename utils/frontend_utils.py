@@ -12,15 +12,6 @@ def load_css(file_name=fr'{dir_path}\utils\style.css'):
     with open(file_name, "r") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-def create_sidebar(dir_path=dir_path):
-
-
-    # st.sidebar.markdown("<h1 style='text-align: center; color: white;'>Welcome!</h1>", unsafe_allow_html=True)
-    # st.sidebar.image(fr'{dir_path}\resume\self.jpeg')
-    st.sidebar.markdown("<h4 style='text-align: center; color: white;'>Chat with my buddy, Rebbe, below to learn more about me! </h4>", unsafe_allow_html=True)
-
-    st.sidebar.chat_input('Hi, I am Rebbe! Type your questions about Osher here!')
-
 def create_aboutme(dir_path=dir_path):
 
 

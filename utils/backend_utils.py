@@ -13,6 +13,9 @@ resume_name = 'osher_boudara_resume.pdf'
 resume_pdf_path = resume_directory_path + resume_name
 
 
+
+
+
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         encoded = base64.b64encode(img_file.read()).decode()
@@ -20,6 +23,9 @@ def get_base64_image(image_path):
 
 def read_file_object(markdown_file):
     return Path(markdown_file).read_text()
+
+
+
 
 @st.cache_data
 def download_google_doc_file(url, output_file_name):
