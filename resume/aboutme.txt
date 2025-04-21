@@ -1,69 +1,72 @@
 
-👤 Personal Background
+### 💼 **Professional Experience**
 
-Osher Boudara was born in San Diego and grew up in Los Angeles. After high school, he spent a gap year studying in Tel Aviv at Bar Ilan University. He then returned to Los Angeles and earned an Associate’s Degree in Mathematics from Los Angeles Valley College. He later transferred to California State University, Northridge (CSUN), where he earned a B.S. in Computer Science with a minor in Statistics.
-
-While at CSUN, he interned as a Data Engineer at Cherre and worked as a Python Developer at Hoffman Brothers Realty, an apartment leasing firm. Osher also worked as a tutor in Math through Calculus, a leasing consultant, and data entry associate at Affinity Healthcare Center. 
-
-Osher currently lives in Cambridge, Massachusetts.
-
-💼 Professional Experience
-
-Cognizant (Associate Data Scientist | Aug 2022 – Present)
-
+**Cognizant (Associate Data Scientist | Aug 2022 – Present)**  
 Osher began working at Cognizant in August 2022. His roles have primarily been within the agriculture, crop science, and environmental science sectors, working with a global Fortune 500 client. His key projects and responsibilities include:
 
-- Leading and developing data science and engineering projects in the crop science division, adapting to evolving requirements and delivering actionable solutions to stakeholders.
+- Leading and developing data science and engineering projects in the crop science division.
 - Implementing components of the data science lifecycle: EDA, ETL pipelines, MLOps, cloud-computing development, cloud infrastructure, version control, information systems management, and visualization tools.
-- Sole developer of the Climate Impact and Adaptation Tool — a time-efficient crop modeling framework that simulates global crop growth under varying climate change scenarios. This tool provides insights into the crop cycle, environmental conditions, agricultural practices, yield shifts, emissions, and how climate change impacts these variables through the year 2100.
-- Advising business teams on how to adapt their strategies using insights from the Climate Impact and Adaptation Tool while maintaining company revenue.
-- Delivered a patentable Market Share Forecast tool using machine learning for prediction, classification, and feature engineering — providing unprecedented business insights.
+- Sole developer of the **Climate Impact and Adaptation Tool** — a crop modeling framework that simulates global crop growth under varying climate change scenarios.
+- Advising business teams on strategies using insights from the **Climate Impact and Adaptation Tool** while maintaining company revenue.
+- Delivered a **Market Share Forecast tool** using machine learning for prediction, classification, and feature engineering.
 
-Hoffman Brothers Realty (Python Developer)
+---
 
-At Hoffman Brothers Realty, Osher contributed to multiple automation and analytics initiatives:
+**Hoffman Brothers Realty (Python Developer | Previous Role)**  
+At Hoffman Brothers Realty, Osher contributed to automation and analytics:
 
 - Developed Python-based automation using AWS services such as Lambda, EventBridge, and S3, reducing time and labor costs.
 - Created scripts to interact with the company’s Airtable database for CRUD operations.
 - Performed exploratory data analysis (EDA) to understand customer behavior and changing market conditions.
 
-💻 Personal Projects
+---
 
-All of the following projects are available on Osher’s personal GitHub: https://github.com/osherboudara99
+### 👤 **Personal Background**
 
-- Song Popularity Comparison  
-  A capstone project from Data Engineer training at Cognizant. This project predicts a song’s popularity using Spotify data, applying regression models such as XGBoost, Random Forest, and Linear Regression. Results are compared, and business insights are derived from feature weights to understand what contributes to song popularity.
+Osher Boudara was born in San Diego and grew up in Los Angeles. After high school, he spent a gap year studying at Bar Ilan University in Tel Aviv. He later earned an Associate’s Degree in Mathematics from Los Angeles Valley College and a B.S. in Computer Science with a minor in Statistics from California State University, Northridge (CSUN). 
 
-- Loan Predictions Algorithm Comparison  
-  A machine learning project comparing classification models to predict loan defaults and evaluate algorithm performance.
+---
 
-- Graph Algorithms  
-  A project implementing and visualizing graph algorithms using the NetworkX library.
+### 💻 **Personal Projects**
 
-- RoommateFinderApp  
-  A mobile app built with React Native for the front end and Python/JavaScript for the back end, designed to help users find roommates in their area.
+1. **Song Popularity Comparison**  
+   A capstone project from Data Engineer training at Cognizant. This project predicts a song’s popularity using Spotify data, applying regression models such as XGBoost, Random Forest, and Linear Regression.
 
-- JCPlus Compiler  
-  A compiler written in Java that targets a C-like language. Developed for a Language Design course, the language supports object-oriented features like class-based inheritance and bounds-checked arrays to improve safety and functionality.
+2. **Loan Predictions Algorithm Comparison**  
+   A machine learning project comparing classification models to predict loan defaults.
 
-- Neural Network for College Admissions  
-  A basic neural network model created with a mock dataset to predict college admissions. Built as part of an advanced data structures course.
+3. **Graph Algorithms**  
+   A project implementing and visualizing graph algorithms using the NetworkX library.
 
-- Resume WebApp  
-  A Streamlit web app that showcases Osher’s resume, certifications, and personal projects. The current chatbot project is integrated into this app.
+4. **RoommateFinderApp**  
+   A mobile app built with React Native for the front end and Python/JavaScript for the back end.
 
-🎸 Hobbies & Interests
+5. **JCPlus Compiler**  
+   A compiler written in Java for a C-like language, focusing on object-oriented features like class-based inheritance.
 
-Osher enjoys playing guitar, bass, and synthesizer. He listens to music frequently and tries to discover at least five new albums each week. His other interests include:
+6. **Neural Network for College Admissions**  
+   A basic neural network model to predict college admissions.
 
-- Playing video games such as Dark Souls and Fallout  
-- Hiking, exploring cities and nature  
-- Playing golf and tennis  
-- Following the NFL and UFC  
-- Traveling, trying new foods, and watching movies, TV shows, and documentaries  
+7. **Resume WebApp**  
+   A Streamlit web app that showcases Osher’s resume, certifications, and personal projects. The current chatbot project is integrated into this app.
 
-🔗 Links
+---
 
-- Personal GitHub: github.com/osherboudara99  
-- Work GitHub: github.com/osherboudara-work  
-- LinkedIn: https://www.linkedin.com/in/osher-boudara-a612921b5/
+### 🎸 **Hobbies & Interests**
+
+Osher enjoys playing guitar, bass, and synthesizer, listens to music frequently, and tries to discover at least five new albums each week. He also enjoys:
+
+- Playing video games such as Dark Souls and Fallout
+- Hiking and exploring nature or cities
+- Playing golf and tennis
+- Following the NFL and UFC
+- Traveling, trying new foods, and watching movies, TV shows, and documentaries
+
+---
+
+### 🔗 **Links**
+
+- [Personal GitHub](https://github.com/osherboudara99)
+- [Work GitHub](https://github.com/osherboudara-work)
+- [LinkedIn](https://www.linkedin.com/in/osher-boudara-a612921b5/)
+

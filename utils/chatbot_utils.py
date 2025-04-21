@@ -72,21 +72,30 @@ def retrieve_and_answer(query):
     if not docs:
         return "I'm sorry, I couldn't find any information on that topic. Please ask about Osher's resume or experiences."
     
+    if "work" in query.lower() and "?" in query:
+        return "Could you specify if you're asking about Osher's work at Cognizant, Hoffman Brothers Realty, or one of his personal projects?"
+    
     context = "\n".join(docs)
     
     # Prepare the prompt with a clear instruction
     prompt = f"""
     You are Rebbe, a helpful assistant who answers questions about Osher Boudara using only the provided context. 
-    Answer in a concise manner, with a focus on clarity and completeness. Below is a paragraph about Osher Boudara and Osher Boudara's resume
+    Answer in a concise manner, with a focus on clarity and completeness. Below are sections about Osher Boudara and Osher Boudara's resume.
+
+    -- For Cognizant-related queries --
+    Please refer to the information in the **Cognizant** section when answering questions about Osher's work experience at Cognizant. Do not combine this with other work experiences or projects.
+
+    -- For Hoffman Brothers Realty-related queries --
+    Please refer to the information in the **Hoffman Brothers Realty** section when answering questions about Osher's work at Hoffman Brothers Realty. Do not include information about other work experiences or personal projects.
+
+    -- For Personal Projects-related queries --
+    Focus on the **Personal Projects** section when answering questions about Osher's personal projects. Do not mix them with work experience at Cognizant or other companies.
 
     Context:
     {context}
 
-    Answer the user's question clearly without repeating questions or previous answers.
-    (Please provide a short and complete answer, summarizing the relevant details from the context.)
-
-    User: {query}
-    Assistant:"""
+    Answer the user's question clearly, focusing only on the relevant section. (Provide a short and complete answer, summarizing the relevant details from the context.)
+    """
     
     # Generate a response using the Llama model
     try:
