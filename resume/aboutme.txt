@@ -1,72 +1,59 @@
-
 ### 💼 **Professional Experience**
 
 **Cognizant (Associate Data Scientist | Aug 2022 – Present)**  
-Osher began working at Cognizant in August 2022. His roles have primarily been within the agriculture, crop science, and environmental science sectors, working with a global Fortune 500 client. His key projects and responsibilities include:
-
-- Leading and developing data science and engineering projects in the crop science division.
-- Implementing components of the data science lifecycle: EDA, ETL pipelines, MLOps, cloud-computing development, cloud infrastructure, version control, information systems management, and visualization tools.
-- Sole developer of the **Climate Impact and Adaptation Tool** — a crop modeling framework that simulates global crop growth under varying climate change scenarios.
-- Advising business teams on strategies using insights from the **Climate Impact and Adaptation Tool** while maintaining company revenue.
-- Delivered a **Market Share Forecast tool** using machine learning for prediction, classification, and feature engineering.
-
----
+- Leading data science and engineering projects in the crop science division of a Fortune 500 client.  
+- Implementing data science lifecycle components: EDA, ETL pipelines, MLOps, cloud computing, and visualization tools.  
+- Developed the **Climate Impact and Adaptation Tool**, a crop modeling framework for simulating global crop growth under climate change scenarios.  
+- Delivered a **Market Share Forecast Tool** using machine learning for prediction and classification.  
+- Advising business teams using insights from data science tools to support decision-making.
 
 **Hoffman Brothers Realty (Python Developer | Previous Role)**  
-At Hoffman Brothers Realty, Osher contributed to automation and analytics:
-
-- Developed Python-based automation using AWS services such as Lambda, EventBridge, and S3, reducing time and labor costs.
-- Created scripts to interact with the company’s Airtable database for CRUD operations.
-- Performed exploratory data analysis (EDA) to understand customer behavior and changing market conditions.
+- Automated workflows using AWS services (Lambda, EventBridge, S3), reducing time and labor costs.  
+- Built Python scripts for database operations and performed exploratory data analysis (EDA) to understand customer behavior.  
 
 ---
 
 ### 👤 **Personal Background**
 
-Osher Boudara was born in San Diego and grew up in Los Angeles. After high school, he spent a gap year studying at Bar Ilan University in Tel Aviv. He later earned an Associate’s Degree in Mathematics from Los Angeles Valley College and a B.S. in Computer Science with a minor in Statistics from California State University, Northridge (CSUN). 
+- Born in San Diego and raised in Los Angeles.  
+- Earned an Associate’s Degree in Mathematics from Los Angeles Valley College.  
+- Graduated with a B.S. in Computer Science and a minor in Statistics from California State University, Northridge (CSUN).  
+- Spent a gap year studying at Bar Ilan University in Tel Aviv.  
 
 ---
 
-### 💻 **Personal Projects**
+### 💻 **Key Projects**
 
-1. **Song Popularity Comparison**  
-   A capstone project from Data Engineer training at Cognizant. This project predicts a song’s popularity using Spotify data, applying regression models such as XGBoost, Random Forest, and Linear Regression.
+1. **Climate Impact and Adaptation Tool**  
+   - Simulates global crop growth under varying climate change scenarios.  
+   - Provides actionable insights for business teams.  
 
-2. **Loan Predictions Algorithm Comparison**  
-   A machine learning project comparing classification models to predict loan defaults.
+2. **Song Popularity Prediction**  
+   - Predicts a song’s popularity using Spotify data and regression models (XGBoost, Random Forest).  
 
-3. **Graph Algorithms**  
-   A project implementing and visualizing graph algorithms using the NetworkX library.
+3. **Loan Default Prediction**  
+   - Compares classification models to predict loan defaults.  
 
 4. **RoommateFinderApp**  
-   A mobile app built with React Native for the front end and Python/JavaScript for the back end.
+   - A mobile app built with React Native and Python for finding roommates.  
 
-5. **JCPlus Compiler**  
-   A compiler written in Java for a C-like language, focusing on object-oriented features like class-based inheritance.
-
-6. **Neural Network for College Admissions**  
-   A basic neural network model to predict college admissions.
-
-7. **Resume WebApp**  
-   A Streamlit web app that showcases Osher’s resume, certifications, and personal projects. The current chatbot project is integrated into this app.
+5. **Resume WebApp**  
+   - A Streamlit web app showcasing Osher’s resume, certifications, and personal projects.  
 
 ---
 
 ### 🎸 **Hobbies & Interests**
 
-Osher enjoys playing guitar, bass, and synthesizer, listens to music frequently, and tries to discover at least five new albums each week. He also enjoys:
-
-- Playing video games such as Dark Souls and Fallout
-- Hiking and exploring nature or cities
-- Playing golf and tennis
-- Following the NFL and UFC
-- Traveling, trying new foods, and watching movies, TV shows, and documentaries
+- Playing guitar, bass, and synthesizer.  
+- Exploring new music (discovers five new albums weekly).  
+- Hiking, playing golf and tennis, and exploring nature.  
+- Following the NFL and UFC.  
+- Traveling, trying new foods, and watching documentaries.  
 
 ---
 
 ### 🔗 **Links**
 
-- [Personal GitHub](https://github.com/osherboudara99)
-- [Work GitHub](https://github.com/osherboudara-work)
-- [LinkedIn](https://www.linkedin.com/in/osher-boudara-a612921b5/)
-
+- [GitHub (Personal)](https://github.com/osherboudara99)  
+- [GitHub (Work)](https://github.com/osherboudara-work)  
+- [LinkedIn](https://www.linkedin.com/in/osher-boudara-a612921b5/)  
