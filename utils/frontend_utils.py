@@ -9,8 +9,9 @@ dir_path = os.getcwd()
 
 # Function to load CSS
 def load_css(file_name=fr'{dir_path}\utils\style.css'):
-    with open(file_name, "r") as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    with open(file_name) as f:
+        css = f.read()
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
 def create_aboutme(dir_path=dir_path):
 

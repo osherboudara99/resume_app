@@ -10,6 +10,8 @@ import os
 
 dir_path = os.getcwd()
 
+
+# Call the function to load the CSS
 frontend.load_css()
 
 chatbot.create_sidebar()

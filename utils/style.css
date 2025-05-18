@@ -1,46 +1,95 @@
+/* === Fade-in Animation === */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-.animated-widget {
-    animation: fadeIn 3s ease-out;
-}
-.stButton>button {
-    animation: fadeIn 3s ease-out;
-}
-.stTextInput>div>div>input {
-    animation: fadeIn 3s ease-out;
-}
-.stMarkdown {
-    animation: fadeIn 3s ease-out;
-}
-.stImage {
-    animation: fadeIn 3s ease-out;
-}
-.stExpander {
-    animation: fadeIn 3s ease-out;
+
+/* === Apply fadeIn to key widgets === */
+[data-testid="stMarkdownContainer"],
+[data-testid="stImage"],
+[data-testid="stExpander"],
+[data-testid="stTextInput"] input,
+[data-testid="stButton"] button {
+    animation: fadeIn 1.5s ease-out;
 }
 
-/*Background color */
-body {
-    background-color: #171718;
+/* === Main Content Styling === */
+[data-testid="stApp"] {
+    background-color: #1e1e3f; /* Light gray */
+    color: white; /* Dark text */
+    font-family: 'Roboto', sans-serif;
 }
 
+[data-testid="stHeader"] {
+    background-color: #1e1e3f !important; /* Change to your desired background color */
+    color: white !important; /* Change to your desired text color */
+    font-family: 'Roboto', sans-serif; /* Optional: Set a custom font */
+    padding: 1rem; /* Optional: Add padding */
+    text-align: center; /* Optional: Center-align the text */
+}
 
-/* Sidebar background color */
-/* [data-testid="stSidebar"] {
-    background-color: #171718;
-} */
+/* === Sidebar Styling === */
+[data-testid="stSidebar"] {
+    background-color: #1e1e3f !important; /* Dark sidebar background */
+    color: white !important; /* White text */
+}
 
-/* Sidebar text
 [data-testid="stSidebar"] * {
+    color: white !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+[data-testid="stSidebar"] select {
+    background-color: #343A40 !important; /* Darker dropdown background */
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* === Header Styling ===
+.custom-header {
+    background-color: #007BFF;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 } */
 
-/* Customize sidebar selectbox */
-[data-testid="stSidebar"] select {
-    background-color: #FF5733;
+/* === Button Styling === */
+[data-testid="stButton"] button {
+    background-color: #FFC107; /* Amber Yellow */
+    color: white; /* Dark Gray */
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+[data-testid="stButton"] button:hover {
+    background-color: #28A745; /* Green */
     color: white;
-    font-weight: bold;
+}
+
+/* === Custom Container Style === */
+.custom-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    color: white; /* Dark text */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* === Links === */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #28A745;
+    text-decoration: underline;
 }
