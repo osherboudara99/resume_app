@@ -2,6 +2,7 @@ import streamlit as st
 from llama_cpp import Llama
 from sentence_transformers import SentenceTransformer
 import chromadb
+import logging
 
 
 MODEL_PATH = "C:\\Users\\Osher N Boudara\\.cache\\gpt4all\\Phi-3-mini-4k-instruct.Q4_0.gguf"
@@ -46,7 +47,8 @@ def retrieve_and_answer(query):
         "good morning": "Good morning! How can I assist you today?",
         "good evening": "Good evening! How can I assist you today?"
     }
-    
+
+    # Convert the query to lowercase and strip whitespace
     query_lower = query.lower().strip()
 
     # Check if the query matches any of the predefined general questions directly
@@ -54,55 +56,54 @@ def retrieve_and_answer(query):
         return general_responses[query_lower]
 
     # Embed the query to get its embedding
-    query_embedding = embedder.encode([query])[0].tolist()
+    try:
+        query_embedding = embedder.encode([query_lower])[0].tolist()
+        logging.info("Query embedding generated successfully.")
+    except Exception as e:
+        logging.error(f"Error generating query embedding: {e}")
+        return "An error occurred while processing your query."
 
     # Query the vector store to find the most relevant documents
     try:
         results = vectorstore.query(query_embeddings=[query_embedding], n_results=3)
     except Exception as e:
         return f"An error occurred while querying the database: {str(e)}"
-    
+
     # Get the retrieved documents
     docs = results.get("documents", [])
 
     # Flatten documents list in case of nested lists
     docs = [doc for sublist in docs for doc in (sublist if isinstance(sublist, list) else [sublist])]
-    
+
     # If no documents are found
     if not docs:
-        return "I'm sorry, I couldn't find any information on that topic. Please ask about Osher's resume or experiences."
-    
-    if "work" in query.lower() and "?" in query:
-        return "Could you specify if you're asking about Osher's work at Cognizant, Hoffman Brothers Realty, or one of his personal projects?"
-    
+        return "I'm sorry, I can only answer questions about Osher Boudara or general small talk."
+
+    # Combine the retrieved documents into a single context
     context = "\n".join(docs)
-    
+
     # Prepare the prompt with a clear instruction
     prompt = f"""
     You are Rebbe, a helpful assistant who answers questions about Osher Boudara using only the provided context. 
-    Answer in a concise manner, with a focus on clarity and completeness. Below are sections about Osher Boudara and Osher Boudara's resume.
-
-    -- For Cognizant-related queries --
-    Please refer to the information in the **Cognizant** section when answering questions about Osher's work experience at Cognizant. Do not combine this with other work experiences or projects.
-
-    -- For Hoffman Brothers Realty-related queries --
-    Please refer to the information in the **Hoffman Brothers Realty** section when answering questions about Osher's work at Hoffman Brothers Realty. Do not include information about other work experiences or personal projects.
-
-    -- For Personal Projects-related queries --
-    Focus on the **Personal Projects** section when answering questions about Osher's personal projects. Do not mix them with work experience at Cognizant or other companies.
+    Do not make up information or answer questions unrelated to Osher Boudara. If the question is unrelated, respond with:
+    "I'm sorry, I can only answer questions about Osher Boudara or general small talk."
 
     Context:
     {context}
 
-    Answer the user's question clearly, focusing only on the relevant section. (Provide a short and complete answer, summarizing the relevant details from the context.)
+    Question:
+    {query}
+
+    Answer:
     """
-    
+
     # Generate a response using the Llama model
     try:
         response = llm(prompt, max_tokens=250)
         return response["choices"][0]["text"].strip()
     except Exception as e:
-        return f"An error occurred while generating the response: {str(e)}"
+        logging.error(f"Error generating response from Llama model: {e}")
+        return "I'm sorry, I couldn't generate a response. Please try again later."
 
 
 
@@ -110,13 +111,14 @@ def create_sidebar():
     with st.sidebar:
         st.markdown("### 💬 Chat with Rebbe!")
         st.markdown("Ask anything about Osher — resume, skills, projects, and more.")
-        
+
         if "chat_history" not in st.session_state:
             st.session_state.chat_history = []
 
         user_input = st.chat_input("Ask a question about Osher...")
         if user_input:
-            answer = retrieve_and_answer(user_input)
+            with st.spinner("Rebbe is thinking..."):
+                answer = retrieve_and_answer(user_input)
             st.session_state.chat_history.append(("User", user_input))
             st.session_state.chat_history.append(("Assistant", answer))
 
