@@ -93,7 +93,51 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+import requests
 
+GITHUB_USERNAME = "osherboudara99"
+
+def get_sorted_repos_by_update(username, token=None):
+    url = f"https://api.github.com/users/{username}/repos?per_page=100"
+    headers = {"Authorization": f"token {token}"} if token else {}
+    
+    response = requests.get(url, headers=headers)
+    if response.status_code != 200:
+        print(f"Failed to fetch repos: {response.status_code}")
+        return []
+
+    repos = response.json()
+    
+    # Sort repos by 'updated_at' (latest first)
+    sorted_repos = sorted(repos, key=lambda r: r['updated_at'], reverse=True)
+
+    # Optional: extract useful info for each repo
+    formatted_repos = []
+    for repo in sorted_repos:
+        formatted_repos.append({
+            "name": repo["name"],
+            "html_url": repo["html_url"],
+            "description": repo["description"],
+            "language": repo["language"],
+            "stargazers_count": repo["stargazers_count"],
+            "forks_count": repo["forks_count"],
+            "updated_at": repo["updated_at"]
+        })
+
+    return formatted_repos
+
+def display_repos(repos):
+    for repo in repos:
+        with st.container():
+            st.markdown(f"### [{repo['name']}]({repo['html_url']})")
+            st.markdown(f"**Description:** {repo['description'] or 'No description'}")
+            st.markdown(f"**Language:** {repo['language'] or 'Not specified'}")
+            st.markdown(f"**Last Updated:** {repo['updated_at']}")
+            st.markdown(f"⭐ Stars: {repo['stargazers_count']} | 🍴 Forks: {repo['forks_count']}")
+            st.markdown("---")
+
+repos = get_sorted_repos_by_update(GITHUB_USERNAME)
+display_repos(repos)
 
 
 
