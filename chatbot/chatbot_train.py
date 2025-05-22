@@ -131,50 +131,45 @@ def chunk_text(text, chunk_size=500, overlap=100):
 
     return chunks
 
+def chunk_by_section(text):
+    """
+    Splits text into sections based on markdown headers (### or ####).
+    Each section will be used as a chunk for embedding.
+    """
+    # Split on headers, but keep the headers with the content
+    sections = re.split(r'(?=^#{2,4}\s)', text, flags=re.MULTILINE)
+    # Clean up and filter out empty sections
+    return [section.strip() for section in sections if section.strip()]
+
 def embed_and_store(test_mode=False):
     """
     Embeds the documents and stores them in a persistent vector database.
-    - Loads documents from the resume directory
-    - Splits each document into chunks
-    - Encodes the chunks into embeddings using a SentenceTransformer model
-    - Stores the embeddings, chunk texts, and IDs in a ChromaDB collection
-    Args:
-        test_mode (bool): If True, processes only the first two documents for testing
+    Uses section-based chunking for better retrieval.
     """
-    # Load documents from the resume directory
     docs = load_documents()
     if test_mode:
-        docs = docs[:2]  # Process only the first two documents in test mode
+        docs = docs[:2]
 
     texts, ids = [], []
 
-    # Chunk each document and prepare for embedding
     for doc in docs:
         try:
-            chunks = chunk_text(doc["content"])
+            # Use section-based chunking
+            chunks = chunk_by_section(doc["content"])
             texts.extend(chunks)
-            ids.extend([f"{doc['id']}_chunk{i}" for i in range(len(chunks))])
+            ids.extend([f"{doc['id']}_section{i}" for i in range(len(chunks))])
         except Exception as e:
             logging.error(f"Failed to process document {doc['id']}: {e}")
 
     try:
-        # Initialize the embedding model
         embedder = SentenceTransformer(MODEL_NAME)
-
-        # Generate embeddings for the text chunks
         embeddings = embedder.encode(texts).tolist()
-
-        # Initialize the ChromaDB client and collection
         client = chromadb.PersistentClient(path=VECTOR_DB_DIR)
         collection = client.get_or_create_collection("osher_docs")
-
-        # Add the embeddings, texts, and IDs to the collection
         collection.add(documents=texts, ids=ids, embeddings=embeddings)
-
-        logging.info(f"Embedded {len(texts)} chunks.")
+        logging.info(f"Embedded {len(texts)} section-based chunks.")
     except Exception as e:
         logging.error(f"Failed to embed or store documents: {e}")
 
 if __name__ == "__main__":
-    # Embed and store the documents in vector db
     embed_and_store()

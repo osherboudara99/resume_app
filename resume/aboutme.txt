@@ -1,59 +1,48 @@
-### 💼 **Professional Experience**
+### 💼 Professional Experience
 
-**Cognizant (Associate Data Scientist | Aug 2022 – Present)**  
-- Leading data science and engineering projects in the crop science division of a Fortune 500 client.  
-- Implementing data science lifecycle components: EDA, ETL pipelines, MLOps, cloud computing, and visualization tools.  
-- Developed the **Climate Impact and Adaptation Tool**, a crop modeling framework for simulating global crop growth under climate change scenarios.  
-- Delivered a **Market Share Forecast Tool** using machine learning for prediction and classification.  
-- Advising business teams using insights from data science tools to support decision-making.
+**Cognizant** — Associate Data Scientist (Aug 2022 – Present)
+- Lead and develop projects in data science and engineering teams for a Fortune 500 crop science client.
+- Implement data science lifecycle: project scoping, data ingestion, data warehouse management, ETL pipelines, MLOps, AWS/GCP, version control, visualization.
+- Developed Climate Change Impact and Adaptation tools: crop modeling framework for simulating crop growth under climate scenarios.
+- Delivered Market Share Forecast tool: machine learning for predictions, classification, and feature extraction.
 
-**Hoffman Brothers Realty (Python Developer | Previous Role)**  
-- Automated workflows using AWS services (Lambda, EventBridge, S3), reducing time and labor costs.  
-- Built Python scripts for database operations and performed exploratory data analysis (EDA) to understand customer behavior.  
-
----
-
-### 👤 **Personal Background**
-
-- Born in San Diego and raised in Los Angeles.  
-- Earned an Associate’s Degree in Mathematics from Los Angeles Valley College.  
-- Graduated with a B.S. in Computer Science and a minor in Statistics from California State University, Northridge (CSUN).  
-- Spent a gap year studying at Bar Ilan University in Tel Aviv.  
+**Hoffman Brothers Realty** — Python Developer (Previous Role)
+- Automated workflows using AWS (Lambda, EventBridge, S3), reducing time and labor costs.
+- Built Python scripts for database operations and exploratory data analysis (EDA).
 
 ---
 
-### 💻 **Key Projects**
+### 👤 Personal Background
 
-1. **Climate Impact and Adaptation Tool**  
-   - Simulates global crop growth under varying climate change scenarios.  
-   - Provides actionable insights for business teams.  
-
-2. **Song Popularity Prediction**  
-   - Predicts a song’s popularity using Spotify data and regression models (XGBoost, Random Forest).  
-
-3. **Loan Default Prediction**  
-   - Compares classification models to predict loan defaults.  
-
-4. **RoommateFinderApp**  
-   - A mobile app built with React Native and Python for finding roommates.  
-
-5. **Resume WebApp**  
-   - A Streamlit web app showcasing Osher’s resume, certifications, and personal projects.  
+- Born in San Diego, California; raised in Los Angeles, California.
+- Associate’s Degree in Mathematics from Los Angeles Valley College.
+- B.S. in Computer Science, minor in Statistics, from California State University, Northridge (CSUN).
+- Gap year at Bar Ilan University, Tel Aviv.
 
 ---
 
-### 🎸 **Hobbies & Interests**
+### 💻 Key Projects
 
-- Playing guitar, bass, and synthesizer.  
-- Exploring new music (discovers five new albums weekly).  
-- Hiking, playing golf and tennis, and exploring nature.  
-- Following the NFL and UFC.  
-- Traveling, trying new foods, and watching documentaries.  
+- **Climate Impact and Adaptation Tool**: Simulates global crop growth under climate change scenarios; provides business insights.
+- **Song Popularity Prediction**: Predicts song popularity using Spotify data and regression models (XGBoost, Random Forest).
+- **Loan Default Prediction**: Compares classification models to predict loan defaults.
+- **RoommateFinderApp**: Mobile app (React Native, Python) for finding roommates.
+- **Resume WebApp**: Streamlit app showcasing resume, certifications, and projects.
 
 ---
 
-### 🔗 **Links**
+### 🎸 Hobbies & Interests
 
-- [GitHub (Personal)](https://github.com/osherboudara99)  
-- [GitHub (Work)](https://github.com/osherboudara-work)  
-- [LinkedIn](https://www.linkedin.com/in/osher-boudara-a612921b5/)  
+- Playing guitar, bass, and synthesizer.
+- Exploring new music (five new albums weekly on average).
+- Hiking, golf, tennis, and exploring nature.
+- Following NFL and UFC.
+- Traveling, trying new foods, watching documentaries.
+
+---
+
+### 🔗 Links
+
+- [GitHub (Personal)](https://github.com/osherboudara99)
+- [GitHub (Work)](https://github.com/osherboudara-work)
+- [LinkedIn](https://www.linkedin.com/in/osher-boudara-a612921b5/)

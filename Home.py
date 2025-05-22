@@ -40,7 +40,7 @@ st.markdown("""
 
 </div>
 """, unsafe_allow_html=True)
-time.sleep(3)
+time.sleep(1.5)
 
 # Use `components.html` to properly execute JavaScript
 components.html("""
@@ -84,10 +84,10 @@ st.markdown(f"""
     </div>
     <div style="max-width: 600px; font-size: 16px; line-height: 1.6;">
         <p>
-        As a Data Scientist at Cognizant, I am leading and developing projects in multiple data science and engineering teams for the crop science division of a global Fortune 500 company. I use my skills in ETL, ML, and cloud computing to deliver solutions that meet the client's needs and expectations.
+        As a Senior Data Scientist at Cognizant, I am leading and developing projects in data science and engineering teams for the crop science division of a global Fortune 500 company. I use my data science skillset to deliver solutions that meet the client's needs and expectations.
         </p>
         <p>
-        I have a BS in Computer Science and a minor in Statistics from California State University, Northridge, where I graduated with honors. I am passionate about conducting statistical research and transforming dataframes into actionable insights. I am always eager to learn new technologies and tools, and I have earned multiple certifications in Python, Statistics, and Machine Learning.
+        I have a B.S. in Computer Science and a minor in Statistics from California State University, Northridge, where I graduated with honors. I am passionate about conducting statistical research and transforming dataframes into actionable insights. 
         </p>
     </div>
 </div>
