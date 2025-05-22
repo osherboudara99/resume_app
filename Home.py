@@ -93,37 +93,73 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+import streamlit as st
 import requests
+from datetime import datetime, timezone
+from dateutil import relativedelta
+
+def convert_github_timestamp(timestamp):
+    dt = datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    human_readable = dt.strftime("%B %d, %Y at %I:%M %p")
+    now = datetime.now(timezone.utc)
+    delta = relativedelta.relativedelta(now, dt)
+
+    if delta.years > 0:
+        relative = f"{delta.years} year{'s' if delta.years > 1 else ''} ago"
+    elif delta.months > 0:
+        relative = f"{delta.months} month{'s' if delta.months > 1 else ''} ago"
+    elif delta.days > 0:
+        relative = f"{delta.days} day{'s' if delta.days > 1 else ''} ago"
+    elif delta.hours > 0:
+        relative = f"{delta.hours} hour{'s' if delta.hours > 1 else ''} ago"
+    elif delta.minutes > 0:
+        relative = f"{delta.minutes} minute{'s' if delta.minutes > 1 else ''} ago"
+    else:
+        relative = "just now"
+
+    return human_readable, relative
 
 GITHUB_USERNAME = "osherboudara99"
 
-def get_sorted_repos_by_update(username, token=None):
+def fetch_languages(owner, repo, token=None):
+    url = f"https://api.github.com/repos/{owner}/{repo}/languages"
+    headers = {"Authorization": f"token {token}"} if token else {}
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        keys_str = ' | '.join(response.json().keys())
+        return keys_str
+    else:
+        print(f"Error fetching languages for {repo}: {response.status_code}")
+        return "Unknown"
+
+def get_repos(username, token=None):
     url = f"https://api.github.com/users/{username}/repos?per_page=100"
     headers = {"Authorization": f"token {token}"} if token else {}
-    
     response = requests.get(url, headers=headers)
     if response.status_code != 200:
-        print(f"Failed to fetch repos: {response.status_code}")
+        st.error(f"Failed to fetch repos: {response.status_code}")
         return []
 
     repos = response.json()
-    
-    # Sort repos by 'updated_at' (latest first)
-    sorted_repos = sorted(repos, key=lambda r: r['updated_at'], reverse=True)
-
-    # Optional: extract useful info for each repo
     formatted_repos = []
-    for repo in sorted_repos:
+    for repo in repos:
+        languages = fetch_languages(username, repo['name'], token)
+        date_time, relative_time = convert_github_timestamp(repo["updated_at"])
+        created_time, created_relative = convert_github_timestamp(repo["created_at"])
         formatted_repos.append({
             "name": repo["name"],
             "html_url": repo["html_url"],
             "description": repo["description"],
-            "language": repo["language"],
+            "last_update": date_time,
+            "relative_time": relative_time,
+            "language": languages,
             "stargazers_count": repo["stargazers_count"],
             "forks_count": repo["forks_count"],
-            "updated_at": repo["updated_at"]
+            "updated_at": repo["updated_at"],
+            "created_at": repo["created_at"],
+            "created_at_dt": datetime.strptime(repo["created_at"], "%Y-%m-%dT%H:%M:%SZ"),
+            "updated_at_dt": datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ"),
         })
-
     return formatted_repos
 
 def display_repos(repos):
@@ -131,14 +167,38 @@ def display_repos(repos):
         with st.container():
             st.markdown(f"### [{repo['name']}]({repo['html_url']})")
             st.markdown(f"**Description:** {repo['description'] or 'No description'}")
+            st.markdown(f"**Last Updated:** {repo['last_update']} ({repo['relative_time']})")
             st.markdown(f"**Language:** {repo['language'] or 'Not specified'}")
-            st.markdown(f"**Last Updated:** {repo['updated_at']}")
-            st.markdown(f"⭐ Stars: {repo['stargazers_count']} | 🍴 Forks: {repo['forks_count']}")
+            if repo['stargazers_count'] > 0 or repo['forks_count'] > 0:
+                st.markdown(f"⭐ Stars: {repo['stargazers_count']} | 🍴 Forks: {repo['forks_count']}")
             st.markdown("---")
 
-repos = get_sorted_repos_by_update(GITHUB_USERNAME)
-display_repos(repos)
 
+st.title(f"GitHub Repositories for @{GITHUB_USERNAME}")
+
+
+repos = get_repos(GITHUB_USERNAME)
+
+# Sorting options
+sort_key = st.selectbox(
+    "Sort repositories by:",
+    options=["updated_at", "created_at", "name"],
+    format_func=lambda x: {"updated_at": "Last Updated", "created_at": "Created Date", "name": "Name"}[x]
+)
+sort_order = st.radio(
+    "Sort order:",
+    options=["descending", "ascending"]
+)
+
+reverse = sort_order == "descending"
+
+if sort_key in ["updated_at", "created_at"]:
+    sort_field = f"{sort_key}_dt"
+    repos = sorted(repos, key=lambda r: r[sort_field], reverse=reverse)
+else:  # sort_key == "name"
+    repos = sorted(repos, key=lambda r: r["name"].lower(), reverse=reverse)
+
+display_repos(repos)
 
 
 
