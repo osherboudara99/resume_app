@@ -79,10 +79,10 @@ img_base64 = backend.get_base64_image(f"{dir_path}/resume/self.jpeg")
 # HTML layout with flex row
 st.markdown(f"""
 <div style="display: flex; flex-direction: row; align-items: center; background-color: #1e1e3f; padding: 30px; border-radius: 15px; color: white; gap: 30px;">
-    <div>
-        <img src="{img_base64}" style="width: 160px; border-radius: 12px;" />
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="{img_base64}" style="width: 200px; border-radius: 12px;" />
     </div>
-    <div style="max-width: 600px; font-size: 16px; line-height: 1.6;">
+    <div style="max-width: 850px; font-size: 16px; line-height: 1.6;">
         <p>
         As a Senior Data Scientist at Cognizant, I am leading and developing projects in data science and engineering teams for the crop science division of a global Fortune 500 company. I use my data science skillset to deliver solutions that meet the client's needs and expectations.
         </p>
